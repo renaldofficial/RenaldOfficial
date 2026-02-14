@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Public Script</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #1a1a1a; color: #fff; }
+        h1, h2 { color: #00ff88; }
+        button { background: #00ff88; color: #000; border: none; padding: 10px 20px; cursor: pointer; font-weight: bold; border-radius: 5px; }
+        button:hover { background: #00cc70; }
+        .script { background: #333; padding: 15px; border-radius: 5px; font-family: monospace; word-break: break-all; }
+        a { color: #00ff88; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <h1>🎮 Game Scripts</h1>
+    
+    <h2>Murder Mystery 2</h2>
+    <div class="script" id="scriptText">
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/renaldofficial/MurderMystery2/refs/heads/main/lua"))()
+    </div>
+    <button onclick="copyScript()">Copy Script</button>
+    
+    <h2>🌐 Social Media</h2>
+    <p>
+        <a href="tiktok.com/@renaldofficialhub" target="_blank">TikTok</a> | 
+        <a href="https://www.youtube.com/@RenaldOfficialHub" target="_blank">YouTube</a>
+    </p>
+    
+    <p><em>Public script · For educational purposes only</em></p>
+
+    <script>
+        function copyScript() {
+            const scriptText = document.getElementById('scriptText').textContent;
+            navigator.clipboard.writeText(scriptText).then(() => {
+                alert('Script copied to clipboard!');
+            }).catch(err => {
+                alert('Failed to copy: ' + err);
+            });
+        }
+    </script>
+</body>
+</html>
